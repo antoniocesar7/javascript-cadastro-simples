@@ -4,7 +4,9 @@ let nomeCadastro = [];
 let encontrou = false;
 
 function telaCadastrar(){
- for(i=0;i<5;i++){
+    qtCadastro = prompt("Quantos cadastros deseja fazer?");
+    
+ for(i=0;i<qtCadastro;i++){
     //criando os labels
     nomeLabel = document.createElement("label");
     nomeLabel.innerHTML = "Nome: ";
@@ -31,7 +33,7 @@ function telaCadastrar(){
 
 function cadastrar(){
 
-    for (i=0;i<5;i++){
+    for (i=0;i<qtCadastro;i++){
         nomeCadastro[i] = document.getElementById("nome"+i).value;
     }
     //console.log(nomeCadastro);
@@ -57,7 +59,7 @@ function entrar() {
         alert("Ops, algo deu errado!!!");
         area.innerHTML = "Clique no botão para acessar";
     } else {
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < qtCadastro; i++) {
             if (nomeCadastro[i] == nome) {
                 area.innerHTML = "Bem vindo " + nome + "<br>";
                 let botaoSair = document.createElement("button");
