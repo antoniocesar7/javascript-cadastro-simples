@@ -1,3 +1,5 @@
+import a from "./teste";
+document.write(`Importado o valor do arquivo teste ${a}`);
 let area = document.getElementById('area');
 let botao = document.getElementById("botao");
 let nomeCadastro = [];
